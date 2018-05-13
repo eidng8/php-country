@@ -9,10 +9,10 @@ defaults: &defaults
   working_directory: ~/eidng8/php-country
 
   steps:
+    - checkout
+
     - attach_workspace:
         at: ~/eidng8/php-country/tmp
-
-    - checkout
 
     # Download and cache dependencies
     - restore_cache:
