@@ -1,4 +1,21 @@
 <?php
+/**
+ * Locale utilities
+ *
+ * @author    Jackey Cheung <cheung.jackey@gmail.com>
+ * @license   http://www.opensource.org/licenses/mit-license.php MIT
+ * @link      https://github.com/eidng8/php-country
+ *
+ */
+
+/**
+ * Locale utilities
+ *
+ * @author    Jackey Cheung <cheung.jackey@gmail.com>
+ * @license   http://www.opensource.org/licenses/mit-license.php MIT
+ * @link      https://github.com/eidng8/php-country
+ *
+ */
 
 namespace eidng8\Country;
 

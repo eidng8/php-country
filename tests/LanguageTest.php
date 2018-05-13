@@ -1,9 +1,20 @@
 <?php
 /**
- * Created by IntelliJ IDEA.
- * User: JC
- * Date: 2018-05-12
- * Time: 22:47
+ * Locale utilities
+ *
+ * @author    Jackey Cheung <cheung.jackey@gmail.com>
+ * @license   http://www.opensource.org/licenses/mit-license.php MIT
+ * @link      https://github.com/eidng8/php-country
+ *
+ */
+
+/**
+ * Locale utilities
+ *
+ * @author    Jackey Cheung <cheung.jackey@gmail.com>
+ * @license   http://www.opensource.org/licenses/mit-license.php MIT
+ * @link      https://github.com/eidng8/php-country
+ *
  */
 
 namespace eidng8\Tests\Country;
