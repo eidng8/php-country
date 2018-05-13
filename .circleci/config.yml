@@ -38,6 +38,11 @@ defaults: &defaults
     - run: sudo ./vendor/bin/phpunit --log-junit ./phpunit/$CIRCLE_JOB/junit.xml --coverage-clover ./phpunit/$CIRCLE_JOB/clover.xml --coverage-html ./phpunit/$CIRCLE_JOB/
     - run: sudo ./tmp/cc-test-reporter format-coverage -t clover -o ./tmp/codeclimate.$CIRCLE_JOB.json ./phpunit/$CIRCLE_JOB/clover.xml
 
+    - persist_to_workspace:
+        root: tmp
+        paths:
+          - *.json
+
     - store_artifacts:
         path: ./phpunit/
 
@@ -54,7 +59,7 @@ jobs:
       - run:
           name:  Download cc-test-reporter
           command: |
-            sudo mkdir -p tmp/
+            sudo mkdir -p ./tmp/
             sudo curl -sSL https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 -o ./tmp/cc-test-reporter
             sudo chmod +x ./tmp/cc-test-reporter
       - persist_to_workspace:
@@ -71,8 +76,8 @@ jobs:
       - run:
           name: Upload coverage results to Code Climate
           command: |
-            ./tmp/cc-test-reporter sum-coverage tmp/codeclimate.*.json -p 2 -o tmp/coverage.total.json
-            ./tmp/cc-test-reporter upload-coverage -i tmp/coverage.total.json
+            sudo ./tmp/cc-test-reporter sum-coverage ./tmp/codeclimate.*.json -p 2 -o ./tmp/coverage.total.json
+            ./tmp/cc-test-reporter upload-coverage -i ./tmp/coverage.total.json
 
 
 
