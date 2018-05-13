@@ -35,8 +35,11 @@ jobs:
       - run: sudo docker-php-ext-configure intl
       - run: sudo docker-php-ext-install intl
       # run tests!
-      - run: ./vendor/bin/phpunit
+      - run: sudo mkdir -p $CIRCLE_TEST_REPORTS/phpunit
+      - run: sudo ./vendor/bin/phpunit --log-junit $CIRCLE_TEST_REPORTS/phpunit/junit.xml --coverage-html $CIRCLE_TEST_REPORTS/phpunit/
 
+      - store_artifacts:
+          path: $CIRCLE_TEST_REPORTS/phpunit
 
 
   # PHP 7.1
@@ -70,7 +73,11 @@ jobs:
       - run: sudo docker-php-ext-configure intl
       - run: sudo docker-php-ext-install intl
       # run tests!
-      - run: ./vendor/bin/phpunit
+      - run: sudo mkdir -p $CIRCLE_TEST_REPORTS/phpunit
+      - run: sudo ./vendor/bin/phpunit --log-junit $CIRCLE_TEST_REPORTS/phpunit/junit.xml --coverage-html $CIRCLE_TEST_REPORTS/phpunit/
+
+      - store_artifacts:
+          path: $CIRCLE_TEST_REPORTS/phpunit
 
 
 
@@ -105,7 +112,11 @@ jobs:
       - run: sudo docker-php-ext-configure intl
       - run: sudo docker-php-ext-install intl
       # run tests!
-      - run: ./vendor/bin/phpunit
+      - run: sudo mkdir -p $CIRCLE_TEST_REPORTS/phpunit
+      - run: sudo ./vendor/bin/phpunit --log-junit $CIRCLE_TEST_REPORTS/phpunit/junit.xml --coverage-html $CIRCLE_TEST_REPORTS/phpunit/
+
+      - store_artifacts:
+          path: $CIRCLE_TEST_REPORTS/phpunit
 
 
 workflows:
