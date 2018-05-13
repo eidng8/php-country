@@ -29,12 +29,12 @@ jobs:
             - ./vendor
           key: v1-dependencies-{{ checksum "composer.json" }}
 
-      # run tests!
-      - run: php -m
+      # install deps
       - run: sudo apt-get update
       - run: sudo apt-get install -y zlib1g-dev libicu-dev g++
       - run: sudo docker-php-ext-configure intl
       - run: sudo docker-php-ext-install intl
+      # run tests!
       - run: ./vendor/bin/phpunit
 
 
@@ -64,9 +64,12 @@ jobs:
             - ./vendor
           key: v1-dependencies-{{ checksum "composer.json" }}
 
-      # run tests!
-      - run: php -m
+      # install deps
+      - run: sudo apt-get update
+      - run: sudo apt-get install -y zlib1g-dev libicu-dev g++
+      - run: sudo docker-php-ext-configure intl
       - run: sudo docker-php-ext-install intl
+      # run tests!
       - run: ./vendor/bin/phpunit
 
 
@@ -96,9 +99,12 @@ jobs:
             - ./vendor
           key: v1-dependencies-{{ checksum "composer.json" }}
 
-      # run tests!
-      - run: php -m
+      # install deps
+      - run: sudo apt-get update
+      - run: sudo apt-get install -y zlib1g-dev libicu-dev g++
+      - run: sudo docker-php-ext-configure intl
       - run: sudo docker-php-ext-install intl
+      # run tests!
       - run: ./vendor/bin/phpunit
 
 
