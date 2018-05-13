@@ -1,7 +1,6 @@
 {
   "name": "eidng8/country",
   "description": "Utility classes to ease locale related process. If you need more sophisticated features, consider using libraries such as Symfony Intl Component.",
-  "version": "0.0.1",
   "type": "library",
   "license": "MIT",
   "require": {
