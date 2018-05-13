@@ -3,6 +3,7 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/3d3a6ee05cbd42994058/maintainability)](https://codeclimate.com/github/eidng8/php-country/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/3d3a6ee05cbd42994058/test_coverage)](https://codeclimate.com/github/eidng8/php-country/test_coverage)
 [![Build Status](https://travis-ci.org/eidng8/php-country.svg?branch=master)](https://travis-ci.org/eidng8/php-country)
+[![Dependency Status](https://www.versioneye.com/user/projects/5af801510fb24f0e5baabf9d/badge.svg?style=flat-square)](https://www.versioneye.com/user/projects/5af801510fb24f0e5baabf9d)
 
 Utility classes to ease locale related process. It is a thin wrapper around
 existing built-in functions and third party libraries. The goal of this project
