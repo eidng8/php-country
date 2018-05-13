@@ -1,8 +1,14 @@
 {
-  "name": "eidng8/country",
+  "name": "eidng8/locale-wrapper",
   "description": "Utility classes to ease locale related process. If you need more sophisticated features, consider using libraries such as Symfony Intl Component.",
   "type": "library",
   "license": "MIT",
+  "authors": [
+    {
+      "name": "Jackey Cheung",
+      "email": "cheung.jackey@gmail.com"
+    }
+  ],
   "require": {
     "php": ">=5.6",
     "league/iso3166": "^2.1",
