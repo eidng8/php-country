@@ -74,7 +74,7 @@ class Country
      */
     public function __construct($code)
     {
-        $this->setCountry($code);
+        $this->set($code);
     }
 
 
@@ -192,7 +192,7 @@ class Country
      *                         invalid
      * @throws OutOfBoundsException Thrown if the given numeric code is invalid
      */
-    public function setCountry($code)
+    public function set($code)
     {
         if (empty($code)) {
             return $this;
