@@ -31,6 +31,9 @@ jobs:
 
       # run tests!
       - run: php -m
+      - run: sudo apt-get update
+      - run: sudo apt-get install -y zlib1g-dev libicu-dev g++
+      - run: sudo docker-php-ext-configure intl
       - run: sudo docker-php-ext-install intl
       - run: ./vendor/bin/phpunit
 
