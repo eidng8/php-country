@@ -1,4 +1,4 @@
-# php-country
+# locale-wrapper (php-country)
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/3d3a6ee05cbd42994058/maintainability)](https://codeclimate.com/github/eidng8/php-country/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/3d3a6ee05cbd42994058/test_coverage)](https://codeclimate.com/github/eidng8/php-country/test_coverage)
