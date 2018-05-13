@@ -34,7 +34,7 @@ defaults: &defaults
     - run: sudo docker-php-ext-configure intl
     - run: sudo docker-php-ext-install intl
     # run tests!
-    - run: sudo mkdir ./phpunit/$CIRCLE_JOB
+    - run: sudo mkdir -p ./phpunit/$CIRCLE_JOB
     - run: sudo ./vendor/bin/phpunit --log-junit ./phpunit/$CIRCLE_JOB/junit.xml --coverage-clover ./phpunit/$CIRCLE_JOB/clover.xml --coverage-html ./phpunit/$CIRCLE_JOB/
     - run: sudo ./tmp/cc-test-reporter format-coverage -t clover -o ./tmp/codeclimate.$CIRCLE_JOB.json ./phpunit/$CIRCLE_JOB/clover.xml
 
