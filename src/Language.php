@@ -23,7 +23,7 @@ class Language
      *
      * @var array
      */
-    protected static $SPOKEN = [
+    protected static $spoken = [
         'cdo' => 'zh',
         'cjy' => 'zh',
         'cmn' => 'zh',
@@ -146,8 +146,8 @@ class Language
         }
 
         $primary = $lang->primary();
-        if (isset(static::$SPOKEN[$primary])) {
-            return static::$SPOKEN[$primary];
+        if (isset(static::$spoken[$primary])) {
+            return static::$spoken[$primary];
         }
 
         return $primary;
