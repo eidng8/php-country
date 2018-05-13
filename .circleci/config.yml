@@ -55,7 +55,7 @@ jobs:
           name:  Download cc-test-reporter
           command: |
             sudo mkdir -p tmp/
-            sudo curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./tmp/cc-test-reporter
+            sudo curl -sSL https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 -o ./tmp/cc-test-reporter
             sudo chmod +x ./tmp/cc-test-reporter
       - persist_to_workspace:
           root: tmp
