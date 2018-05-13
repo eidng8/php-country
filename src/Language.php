@@ -324,7 +324,6 @@ class Language
      * See {@see \Locale::filterMatches()}
      *
      * @param string|static $locale
-     * @param bool          $canonicalize
      * @return bool
      */
     public function matches($locale)
