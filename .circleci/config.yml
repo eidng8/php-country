@@ -30,7 +30,8 @@ jobs:
           key: v1-dependencies-{{ checksum "composer.json" }}
 
       # run tests!
-      - run: sudo docker-php-ext-install php-intl
+      - run: php -m
+      - run: sudo docker-php-ext-install intl
       - run: ./vendor/bin/phpunit
 
 
@@ -61,7 +62,8 @@ jobs:
           key: v1-dependencies-{{ checksum "composer.json" }}
 
       # run tests!
-      - run: sudo docker-php-ext-install php-intl
+      - run: php -m
+      - run: sudo docker-php-ext-install intl
       - run: ./vendor/bin/phpunit
 
 
@@ -92,7 +94,8 @@ jobs:
           key: v1-dependencies-{{ checksum "composer.json" }}
 
       # run tests!
-      - run: sudo docker-php-ext-install php-intl
+      - run: php -m
+      - run: sudo docker-php-ext-install intl
       - run: ./vendor/bin/phpunit
 
 
