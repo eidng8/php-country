@@ -130,10 +130,10 @@ class CountryTest extends TestCase
     {
         $one = new Country('hk');
         $two = new Country('cn');
-        $this->assertSame('HKG', $one->setCountry(null)->alpha3());
-        $this->assertSame('CHN', $one->setCountry($two)->alpha3());
-        $this->assertSame('USA', $one->setCountry('us')->alpha3());
-        $this->assertSame('CHN', $one->setCountry(156)->alpha3());
+        $this->assertSame('HKG', $one->set(null)->alpha3());
+        $this->assertSame('CHN', $one->set($two)->alpha3());
+        $this->assertSame('USA', $one->set('us')->alpha3());
+        $this->assertSame('CHN', $one->set(156)->alpha3());
     }
 
 
