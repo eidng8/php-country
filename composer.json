@@ -1,0 +1,24 @@
+{
+  "name": "eidng8/country",
+  "description": "Utility classes to ease locale related process. If you need more sophisticated features, consider using libraries such as Symfony Intl Component.",
+  "version": "0.0.1",
+  "type": "library",
+  "license": "MIT",
+  "require": {
+    "php": ">=5.6",
+    "league/iso3166": "^2.1",
+    "alcohol/iso4217": "^3.1"
+  },
+  "require-dev": {
+    "squizlabs/php_codesniffer": "^3.2",
+    "phpunit/phpunit": "^5.7.27"
+  },
+  "autoload": {
+    "psr-4": {
+      "eidng8\\Country\\": "src/"
+    },
+    "exclude-from-classmap": [
+      "/tests/"
+    ]
+  }
+}
