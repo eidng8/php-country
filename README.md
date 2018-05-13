@@ -12,6 +12,8 @@ If you need more sophisticated features, consider using libraries such as
 [Symfony Intl Component](http://symfony.com/doc/current/components/intl.html).
 
 
+### AreaCode
+
 ### Countries
 
 ### Currencies
