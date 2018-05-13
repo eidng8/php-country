@@ -42,8 +42,14 @@ defaults: &defaults
         path: ./phpunit/
 
 
+codeclimate: &codeclimate
+  docker:
+    - image: circleci/php:5.6.36-cli-node-browsers
+
+
 jobs:
   code-climate-download:
+    <<: *codeclimate
     steps:
       - run:
           name:  Download cc-test-reporter
@@ -57,6 +63,7 @@ jobs:
             - cc-test-reporter
 
   code-climate-report:
+    <<: *codeclimate
     steps:
       - attach_workspace:
           at: ~/eidng8/php-country/tmp
