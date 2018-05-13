@@ -13,7 +13,7 @@ class AreaCode
      *
      * @var array
      */
-    private static $codes = [
+    private static $map = [
         'AD' => 376,
         'AE' => 971,
         'AF' => 93,
@@ -262,7 +262,7 @@ class AreaCode
         }
 
         $countries = [];
-        foreach (static::$codes as $key => $item) {
+        foreach (static::$map as $key => $item) {
             if ($item === $code) {
                 $countries[] = $key;
             }
@@ -281,13 +281,12 @@ class AreaCode
      */
     public static function byCountry($country)
     {
-        if ($country instanceof Country) {
-            $country = $country->alpha2();
-        } else {
-            $country = (new Country($country))->alpha2();
+        if (!($country instanceof Country)) {
+            $country = new Country($country);
         }
 
-        return empty(static::$codes[$country]) ? null
-            : static::$codes[$country];
+        $country = $country->alpha2();
+
+        return empty(static::$map[$country]) ? null : static::$map[$country];
     }
 }
