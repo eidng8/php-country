@@ -76,7 +76,7 @@ jobs:
       - run:
           name: Upload coverage results to Code Climate
           command: |
-            sudo ./tmp/cc-test-reporter sum-coverage ./tmp/codeclimate.*.json -p 3 -o ./tmp/coverage.total.json
+            ./tmp/cc-test-reporter sum-coverage ./tmp/codeclimate.*.json -p 3 -o ./tmp/coverage.total.json
             ./tmp/cc-test-reporter upload-coverage -i ./tmp/coverage.total.json
 
 
