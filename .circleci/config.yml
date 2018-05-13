@@ -41,7 +41,7 @@ defaults: &defaults
     - persist_to_workspace:
         root: tmp
         paths:
-          - *.json
+          - '*.json'
 
     - store_artifacts:
         path: ./phpunit/
